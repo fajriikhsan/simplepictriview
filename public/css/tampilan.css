@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.photo-container {
+    padding-top: 10px;
+    margin-top: 20px; /* Jarak tambahan untuk elemen di atas */
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px auto;
+    columns: 4;
+    column-gap: 20px;
+}
+
+.results{
+    padding-top: 150px;
+    margin-top: 20px; /* Jarak tambahan untuk elemen di atas */
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px auto;
+    columns: 4;
+    column-gap: 20px;
+}
+
+
+ 
+.photo-container .box {
+    width: 100%;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+
+.photo-container .box img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.photo-container p {
+    width: 100%; /* Pastikan elemen mencakup seluruh lebar container */
+    padding: 15px; /* Tambahkan ruang di dalam container */
+    border-radius: 10px; /* Opsional: sudut membulat */
+    text-align: center; /* Pusatkan teks */
+    display: block; /* Pastikan elemen tampil sebagai blok */
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column; /* Elemen ke bawah untuk layar kecil */
+    }
+}
+
+@media (max-width: 600px) {
+    .searching.active {
+        width: 300px;
+    }
+    .search-icon {
+        font-size: 20px;
+    }
+    .photo-container {
+        columns: 2; /* Mengurangi jumlah kolom di layar kecil */
+    }
+}
+
+/* Tambahkan efek hover ke gambar */
+.box img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek halus */
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.box img:hover {
+    transform: scale(1.05); /* Membesarkan gambar sedikit */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+}

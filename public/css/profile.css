@@ -1,0 +1,182 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Container Styling (full height and scrollable content) */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    padding-top: 150px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    overflow-y: auto; /* Enable vertical scrolling for content */
+}
+
+/* Remove extra margin/padding */
+.content-section {
+    width: 100%; /* Ensure full width */
+    margin-top: 20px;
+}
+
+/* Photo Container */
+.photo-container {
+    width: 100%; /* Ensure full width */
+    margin: 20px auto;
+    columns: 4; /* Adjust column count as needed */
+    column-gap: 20px;
+}
+
+.photo-container .box {
+    width: 100%; /* Ensure each box takes full width of the column */
+    margin-bottom: 10px;
+    break-inside: avoid; /* Prevent breaking inside boxes */
+}
+
+.photo-container .box img {
+    max-width: 100%; /* Ensure images are responsive */
+    border-radius: 15px;
+}
+
+/* Ensure no margin on body */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Profile Icon Styling */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Username Styling */
+.username {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.select-image {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.select-image:hover {
+    background-color: #4a99ff; /* Hover effect */
+}
+
+/* Active Button Styling */
+.select-image.active {
+    background-color: #4a99ff; /* Color for active button */
+    color: white; /* Text color for active button */
+}
+
+/* Content Section Styling */
+.content-section {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Multi-column Layout for Pinterest-style */
+.photo-container .box {
+    width: 100%; /* Ensure each box takes full width of the column */
+    margin-bottom: 10px;
+    break-inside: avoid; /* Prevent breaking inside boxes */
+}
+
+
+.photo-container .box img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    .photo-container {
+        columns: 1; /* Display 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .photo-container {
+        columns: 1; /* Display 1 column on very small screens */
+    }
+}
+
+/* Styling area gambar profil */
+.image-area {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+     /* Default image terlihat */
+}
+
+.image-area .icon {
+    font-size: 50px;
+    color: #333;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    cursor: pointer;
+
+}
+
+
+.box img:hover {
+    transform: scale(1.05); /* Membesarkan gambar sedikit */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+}
+
+.image-area .icon.hidden {
+    opacity: 0; /* Hilangkan saat class 'hidden' ditambahkan */
+}

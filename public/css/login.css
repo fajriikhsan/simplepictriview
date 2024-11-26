@@ -1,0 +1,105 @@
+* {
+    margin:0px ;
+    padding: 0px;
+box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display : flex ;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 20px;
+}
+
+.container {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+
+}
+.container header {
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.container .form {
+    margin-top: 20px;
+}
+
+.form .input-box {
+    width: 100%;
+    margin-top: 10px;   
+}
+
+.input-box label {
+    display: block;
+    color: #000000;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.form .input-box input {
+    
+    position: static;
+    height: 50px; /* Sedikit tinggikan input box */
+    width: 100%; /* Lebar input menyesuaikan container */
+    max-width: 100%; /* Pastikan lebar input mengikuti ukuran container */
+    outline: none;
+    font-size: 1rem;
+    color: #000000;
+    border: 1px solid rgb(54, 53, 53);
+    border-radius: 6px;
+    padding: 0 15px;
+    transition: all 0.3s ease;
+    }
+
+    .form .column {
+        display: flex;
+        justify-content: center;
+        column-gap: 15px;
+    }
+
+    img {
+        width: 50%;
+        display: flex; 
+        margin-left: auto;
+        margin-right: auto;
+        
+     }
+     
+     .loginbtn {
+    background-color: #081cfd;
+    color: white;
+    padding: 16px 20px;
+    margin: 16px auto; /* Tengah tombol secara horizontal */
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Buat tombol selebar container */
+    max-width: 300px; /* Tetapkan batas maksimal agar tidak terlalu lebar */
+    border-radius: 15px;
+    display: block;
+    font-size: 1.1rem; /* Sedikit besarkan teks pada tombol */
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+     }
+     .loginbtn:hover {
+        background-color: #0a47f5; /* Efek hover pada tombol */
+    }
+     .container p {
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        left: auto;
+        
+       
+        
+    }

@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #0071ff;
+    --light-blue : #b6dbf6;
+    --dark-blue : #005dd1;
+    --grey : #f2f2f2;
+}
+
+body {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--grey);
+    padding-top: 100px;
+}
+
+.container {
+    display: flex;
+    max-width: 600px;
+    height: 600px;
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section, .input-section {
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.image-area {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: var(--grey);
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.image-area .icon {
+    font-size: 60px;
+    color: var(--dark-blue);
+}
+
+.image-area h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.select-image {
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 15px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.select-image:hover {
+    background: var(--dark-blue);
+}
+
+.input-section label {
+    position: relative;
+    top:120px;
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.input-section input, .input-section textarea {
+    position: relative;
+    top: 120px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.input-section textarea {
+    resize: none;
+    height: 80px;
+}
+
+.submit-btn {
+    width: 100%;
+    position: relative;
+    top: 209px;
+    padding: 12px 0;
+    border-radius: 15px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--dark-blue);
+}
+
+#preview {
+    display: none; /* Menyembunyikan gambar saat belum dipilih */
+    max-width: 100%; /* Gambar akan mengisi lebar area */
+    height: auto; /* Proporsi gambar tetap terjaga */
+    margin-top: 10px; /* Jarak antar gambar dan elemen lain */
+    border-radius: 10px; /* Memberikan sudut yang lebih halus pada gambar */
+    border: 2px solid #ddd; /* Border halus untuk memisahkan gambar */
+    object-fit: contain; /* Memastikan gambar tidak terpotong */
+}
+
+#upload-form {
+    width: 100%;
+    display: block;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Menyusun kontainer secara vertikal pada layar kecil */
+        height: auto; /* Menghapus batas tinggi agar kontainer bisa mengalir */
+    }
+
+    .image-area {
+        height: 300px; /* Menurunkan tinggi area gambar untuk tampilan mobile */
+    }
+
+    #preview {
+        width: 100%; /* Memastikan gambar mengisi lebar layar */
+        height: auto; /* Menjaga proporsi gambar */
+    }
+}
